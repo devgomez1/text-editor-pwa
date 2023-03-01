@@ -11,10 +11,9 @@ SO THAT I can reliably retrieve them for later use
 
 1. [Description](#description)
 2. [Technology](#Technology)
-3. [Installation](#installation)
-4. [Usage](#usage)
-5. [Screenshots](#screenshots)
-6. [Contact Info](#contact-info)
+3. [Deployed Link](#Deployed-Link)
+4. [Screenshots](#screenshots)
+5. [Contact Info](#contact-info)
 
 ## Description:
 
@@ -29,11 +28,18 @@ Text editor that runs in the browser. The is a single-page application that meet
 
 ## Deployed Link: 
 
+-[Heroku](https://desolate-ocean-29785.herokuapp.com)
 
 ## Screenshots:
-![Example](./images/Screenshot%202023-02-23%20203625.png)
-![Example](./images/Screenshot%202023-02-23%20203724.png)
-![Example](./images/Screenshot%202023-02-23%20204035.png)
+
+### Here is shown the manifest file.
+![Example](./client/src/images/manifest.png)
+### Here is shown the service worker.
+![Example](./client/src/images/Screenshot%202023-02-28%20212540.png)
+### Here is shown the indexDB storage.
+![Example](./client/src/images/indexdb.png)
+### Here is shown the apps cache strategies 
+![Example](./client/src/images/caching.png)
 
 ## Contact Info:
 
