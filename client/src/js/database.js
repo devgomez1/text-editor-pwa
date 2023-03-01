@@ -1,7 +1,7 @@
-import { openDB } from 'idb';
+import { openDB } from 'idb'
 
-const initdb = async () =>
-  openDB('jate', 1, {
+async function initdb() {
+  return openDB('jate', 1, {
     upgrade(db) {
       if (db.objectStoreNames.contains('jate')) {
         console.log('jate database already exists');
@@ -11,9 +11,10 @@ const initdb = async () =>
       console.log('jate database created');
     },
   });
+}
 
 // Export a function we will use to POST to the database.
-export const postDb = async (content) => {
+export const putDb = async (content) => {
   console.log('posting');
 
   // Create a connection to the database database and version we want to use.
@@ -26,7 +27,7 @@ export const postDb = async (content) => {
   const store = tx.objectStore('jate');
 
   // Use the .add() method on the store and pass in the content.
-  const request = store.add({ jate: content });
+  const request = store.put({ jate: content });
 
   // Get confirmation of the request.
   const result = await request;
@@ -34,7 +35,7 @@ export const postDb = async (content) => {
 };
 
 // Export a function we will use to GET from the database.
-export const getOneDb = async (id) => {
+export const getDb = async (id) => {
   console.log('GET from the database');
 
   // Create a connection to the database database and version we want to use.
